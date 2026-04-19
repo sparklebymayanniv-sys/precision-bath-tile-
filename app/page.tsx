@@ -1,65 +1,183 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="overflow-x-hidden bg-[#0B0F12] text-white">
+      <section className="relative min-h-[92svh] overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/hero.png"
+            alt="Residential tile shower"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/60 to-[#0B0F12]" />
+
+        <div className="relative z-10 mx-auto flex min-h-[92svh] max-w-7xl items-center px-6 py-16 md:px-10">
+          <div className="max-w-4xl">
+            <p className="mb-6 text-xs uppercase tracking-[0.38em] text-neutral-300 md:text-sm">
+              Residential Tile Work
+            </p>
+
+            <h1 className="font-[var(--font-heading)] max-w-5xl text-[2.5rem] font-semibold leading-[0.94] tracking-[-0.05em] sm:text-[3.4rem] md:text-[4.4rem] lg:text-[5rem]">
+              Precision tile installation for residential projects.
+            </h1>
+
+            <p className="mt-6 max-w-[54ch] text-[15px] leading-[1.8] text-neutral-300 md:text-[16px]">
+              Bathrooms, showers, waterproofing systems, heated floors, kitchen
+              backsplashes, natural stone, and large-format tile, executed with
+              clean layout and long-term performance in mind.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/request"
+                className="rounded-full bg-[#C6A56B] px-7 py-3.5 text-sm font-semibold text-black transition hover:opacity-90"
+              >
+                Request a Bid
+              </Link>
+
+              <Link
+                href="/services"
+                className="rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#0F141A]">
+        <div className="mx-auto grid max-w-7xl gap-5 px-6 py-6 md:grid-cols-3 md:px-10 md:py-8">
+          <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.025] p-5 md:p-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-neutral-400">
+              Work
+            </p>
+            <p className="mt-3 text-sm text-neutral-200">
+              Bathrooms, showers, heated floors, and interior tile work
+            </p>
+          </div>
+
+          <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.025] p-5 md:p-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-neutral-400">
+              Approach
+            </p>
+            <p className="mt-3 text-sm text-neutral-200">
+              Clean layout, careful execution, and consistent finish quality
+            </p>
+          </div>
+
+          <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.025] p-5 md:p-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-neutral-400">
+              Clients
+            </p>
+            <p className="mt-3 text-sm text-neutral-200">
+              Builders, remodelers, and homeowners who value well-built spaces
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-2">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/home/home-1.jpg"
+              alt="Custom floral shower tile installation"
+              width={900}
+              height={1200}
+              className="h-[420px] w-full rounded-[1.2rem] object-cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
+          <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-2">
+            <Image
+              src="/images/home/home-2.jpg"
+              alt="Decorative vanity feature wall tile"
+              width={900}
+              height={1200}
+              className="h-[420px] w-full rounded-[1.2rem] object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-2">
+            <Image
+              src="/images/home/home-3.jpg"
+              alt="Custom shower bench tile detail"
+              width={900}
+              height={1200}
+              className="h-[420px] w-full rounded-[1.2rem] object-cover"
+            />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-[#11161c]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:px-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.34em] text-neutral-400">
+              Why it matters
+            </p>
+
+            <h2 className="font-[var(--font-heading)] mt-4 text-4xl font-semibold leading-tight md:text-5xl">
+              Cheap installation is the most expensive mistake in construction.
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-lg leading-8 text-neutral-300">
+            <p>
+              The finish is where the eye rests and where value is judged.
+              Premium materials and thoughtful design choices fail fast when the
+              installation lacks precision.
+            </p>
+
+            <p>
+              Clean execution protects the project, reduces rework, and gives
+              builders and homeowners confidence in the final result.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 md:p-12">
+          <p className="text-xs uppercase tracking-[0.34em] text-neutral-400">
+            Next step
+          </p>
+
+          <h2 className="font-[var(--font-heading)] mt-4 max-w-4xl text-4xl font-semibold leading-tight md:text-5xl">
+            Start with a clear scope and a clean plan.
+          </h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300">
+            Send your project type, location, timeline, and any plans or site
+            photos. Clear information leads to cleaner pricing and better
+            project alignment.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/request"
+              className="rounded-full bg-[#C6A56B] px-7 py-3.5 text-sm font-semibold text-black transition hover:opacity-90"
+            >
+              Request a Bid
+            </Link>
+
+            <Link
+              href="/services"
+              className="rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
+            >
+              Review Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

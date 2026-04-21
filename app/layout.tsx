@@ -24,8 +24,13 @@ export const metadata: Metadata = {
   description:
     "Residential tile installation for high-end bathrooms, showers, feature walls, and finish-driven spaces across Greater Boston.",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -34,7 +39,7 @@ const structuredData = {
   "@type": "HomeAndConstructionBusiness",
   name: "Precision Bath & Tile Group",
   url: "https://precisionbathtile.com",
-  logo: "https://precisionbathtile.com/icon.svg",
+  logo: "https://precisionbathtile.com/favicon.ico",
   image: "https://precisionbathtile.com/images/services/bathroom-1.jpg",
   description:
     "Residential tile installation for high-end bathrooms, showers, feature walls, and finish-driven spaces across Greater Boston.",
@@ -113,8 +118,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-  data-scroll-behavior="smooth"
-  className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[#0B0F12] font-[var(--font-body)] text-white">
         <script

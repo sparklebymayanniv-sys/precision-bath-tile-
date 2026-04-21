@@ -18,8 +18,8 @@ export default function BuildersPage() {
       <section className="relative isolate overflow-hidden border-b border-white/10">
         <div className="absolute inset-0">
           <Image
-            src="/images/builders/hero.jpg "
-            alt="Tile installation for builders and remodelers "
+            src="/images/builders/hero.jpg"
+            alt="Tile installation for builders and remodelers"
             fill
             priority
             className="object-cover object-center"

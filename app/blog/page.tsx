@@ -11,6 +11,17 @@ const articles = [
     thumbnail: "/images/journal/failure-1.jpg",
     featured: true,
   },
+
+  {
+    slug: "why-shower-waterproofing-matters-before-tile-installation",
+    category: "System work",
+    title: "Why shower waterproofing matters before tile installation.",
+    excerpt:
+      "Tile is the finish. The system behind it is what protects the structure. Proper waterproofing decides whether the installation performs or fails.",
+    thumbnail: "/images/journal/bathroom-damage-1.jpg",
+    featured: false,
+  },
+
   {
     slug: "layout-mistakes-show-up-every-day",
     category: "Layout mistakes",
@@ -20,6 +31,7 @@ const articles = [
     thumbnail: "/images/journal/layout-1.jpg",
     featured: false,
   },
+
   {
     slug: "installation-mistakes-that-damage-the-home-and-reduce-property-value",
     category: "System failures",

@@ -1,0 +1,15 @@
+{
+  "name": "Precision Bath & Tile Group",
+  "short_name": "Precision Bath & Tile",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F12",
+  "theme_color": "#0B0F12",
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -254,3 +254,33 @@ export default function BuildersPage() {
     </main>
   );
 }
+<section className="border-t border-white/10">
+  <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 text-center">
+
+    <h2 className="text-2xl md:text-3xl text-white">
+      Need a tile subcontractor for your project?
+    </h2>
+
+    <p className="mt-4 text-[#BDB7AE] max-w-[55ch] mx-auto leading-8">
+      Send your plans or project scope. We focus on residential tile installations
+      where layout, finish quality, and clean execution matter.
+    </p>
+
+    <div className="mt-8 flex justify-center gap-4 flex-wrap">
+      <a
+        href="/request"
+        className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white hover:bg-white/10 transition"
+      >
+        Get Free Estimate
+      </a>
+
+      <a
+        href="tel:617XXXXXXX"
+        className="rounded-full border border-white/20 px-6 py-3 text-sm text-white hover:bg-white/10 transition"
+      >
+        Call Now
+      </a>
+    </div>
+
+  </div>
+</section>

@@ -296,7 +296,7 @@ export default function RequestPage() {
               <p className="mt-4 text-neutral-300">
                 Email: contact@precisionbathtile.com
               </p>
-              <p className="mt-2 text-neutral-300">Phone: (781) 350-8220</p>
+              <p className="mt-2 text-neutral-300">Phone: (857) 428-6123</p>
             </div>
 
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">

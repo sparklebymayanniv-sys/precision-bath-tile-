@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 const articles = [
   {
-    slug: "cheap-installation-is-not-cheaper",
+   slug: "cheap-installation-is-not-cheaper",
     category: "Waterproofing failure",
     title: "Cheap installation is not cheaper. It just delays the real cost.",
     excerpt:
@@ -23,6 +23,20 @@ const articles = [
     title: "Installation mistakes that damage the home and reduce property value.",
     excerpt:
       "Some installation mistakes are visible immediately. Others quietly damage surrounding materials, reduce perceived quality, and lower the value of the entire project.",
+  },
+  {
+    slug: "why-shower-waterproofing-matters-before-tile-installation",
+    category: "System work",
+    title: "Why shower waterproofing matters before tile installation.",
+    excerpt:
+      "Tile is the finish. The system behind it is what protects the structure. Proper waterproofing decides whether the installation performs or fails.",
+  },
+  {
+    slug: "installation-failures-that-start-behind-the-tile",
+    category: "System failures",
+    title: "Installation failures that start behind the tile.",
+    excerpt:
+      "Most tile failures do not begin at the surface. They begin behind it — in missing waterproofing, weak transitions, and failed system execution.",
   },
 ];
 
@@ -619,6 +633,134 @@ export default async function BlogArticlePage({
       </main>
     );
   }
+  if (article.slug === "why-shower-waterproofing-matters-before-tile-installation") {
+    return (
+      <main className="overflow-x-hidden bg-[#070B0F] text-white">
+        <ArticleHero
+          eyebrow="System work"
+          title="Why shower waterproofing matters before tile installation."
+          text="Tile is the visible finish. Waterproofing is the part that protects the structure behind it. When the system is not resolved correctly, the damage starts long before it becomes visible."
+        />
 
+        <ImageTextSection
+          image="/images/journal/bathroom-damage-1.jpg"
+          alt="Opened lower wall showing moisture damage behind shower tile"
+          title="The visible damage is only the late-stage symptom."
+          paragraphs={[
+            "By the time moisture damage becomes visible at the lower wall, the problem is already beyond the surface. Water has moved behind the tile assembly and begun affecting surrounding materials.",
+            "This is why waterproofing cannot be treated as an accessory to the installation. It is part of the system that determines whether the project performs long-term.",
+          ]}
+          caption="What appears at the surface is often the result of a much deeper system failure."
+        />
+
+        <ImageTextSection
+          image="/images/journal/bathroom-demo-1.jpg"
+          alt="Shower opened at base to expose damaged lower wall and framing"
+          title="When the system fails, repair becomes demolition."
+          paragraphs={[
+            "At this stage, the work is no longer tile correction. The assembly has to be opened so damaged material can be evaluated and the base condition can be rebuilt correctly.",
+            "This is the real cost of poor waterproofing decisions: removal, repair, reconstruction, and delay.",
+          ]}
+          caption="Once water reaches the structure, the project moves from repair to reconstruction."
+          reverse
+        />
+
+        <ImageTextSection
+          image="/images/journal/kerdi-system.jpg"
+          alt="System-compatible sealant used at critical shower transitions"
+          title="Waterproofing is not one product. It is a complete assembly."
+          paragraphs={[
+            "A reliable shower is built through correct transitions, proper bonding, compatible materials, and full integration at change-of-plane conditions.",
+            "Sealants, membranes, edges, corners, and floor-to-wall junctions all have to work together. If one part is ignored, the system is weakened.",
+          ]}
+          caption="Critical transitions should be treated as system points, not finish details."
+        />
+
+        <ImageTextSection
+          image="/images/journal/waterproofing-layer.jpg"
+          alt="Waterproofing layer integrated at the base of the shower before final finish"
+          title="The protection happens before the final finish goes in."
+          paragraphs={[
+            "What makes a shower durable is not only the tile selection or grout color. It is the waterproofed assembly beneath the finish layer.",
+            "When those layers are installed with discipline, the final surface is not just clean visually — it is supported by a complete system behind it.",
+          ]}
+          caption="The finish should sit on top of a resolved waterproof assembly."
+          reverse
+        />
+
+        <OutcomeSection
+          image="/images/journal/finished-shower.jpg"
+          alt="Completed shower installation with clean finish and protected assembly"
+          title="Good shower work looks clean because the system was resolved first."
+          paragraphs={[
+            "A refined result does not come from adjusting problems at the end. It comes from treating waterproofing, transitions, and finish installation as one connected process.",
+            "Tile is the visible finish. The system behind it is what protects the project.",
+          ]}
+        />
+
+        <ArticleCta
+          title="Waterproofing is not optional. It is what protects the installation."
+          text="We approach shower work as a complete assembly so the result performs over time instead of failing behind the surface."
+        />
+      </main>
+    );
+  }
+
+  if (article.slug === "installation-failures-that-start-behind-the-tile") {
+    return (
+      <main className="overflow-x-hidden bg-[#070B0F] text-white">
+        <ArticleHero
+          eyebrow="System failures"
+          title="Installation failures that start behind the tile."
+          text="Most tile failures do not begin at the surface. They begin behind it — in missing waterproofing, weak transitions, and failed system execution."
+        />
+
+        <ImageTextSection
+          image="/images/journal/failure-1.jpg"
+          alt="Visible failure and deterioration at lower wall condition"
+          title="The surface is where the failure becomes visible — not where it began."
+          paragraphs={[
+            "When deterioration shows at the edge of the installation, the underlying problem has usually been active for a long time. Moisture has already moved through the system and affected adjacent materials.",
+            "This is why surface appearance alone is not enough to judge a wet-area installation.",
+          ]}
+          caption="Visible damage is often the last stage of the problem, not the first."
+        />
+
+        <ImageTextSection
+          image="/images/journal/failure-2.jpg"
+          alt="Tile installation showing system breakdown and visible moisture-related failure"
+          title="Weak system execution always shows up somewhere."
+          paragraphs={[
+            "Some failures appear in corners, some at transitions, and some at the base of the assembly. The location changes, but the cause is the same: the system was never properly resolved.",
+            "Poor sealing, incompatible layers, and missing waterproofing all lead to the same outcome — failure behind the finished surface.",
+          ]}
+          caption="The exact location changes. The system failure does not."
+          reverse
+        />
+
+        <ImageTextSection
+          image="/images/journal/failure-3.jpg"
+          alt="Additional example of tile failure caused by compromised underlying conditions"
+          title="By the time the failure is obvious, the cost has already grown."
+          paragraphs={[
+            "Once the problem becomes undeniable, the repair is rarely a small correction. Surrounding materials, structure, and installation time are all affected.",
+            "This is why poor installation is never truly cheaper. It simply delays when the real cost appears.",
+          ]}
+          caption="What begins behind the tile eventually becomes a much larger repair."
+        />
+
+        <FullWidthImageSection
+          image="/images/journal/failure-4.jpg"
+          alt="Broader view of failed installation condition"
+          text="System failure changes the scope of the work completely. Instead of a finished installation performing as intended, the space has to be opened, corrected, and rebuilt."
+        />
+
+        <ArticleCta
+          title="Most failures are system failures."
+          text="We focus on waterproofing, transitions, and full assembly control so the installation performs as more than a surface finish."
+        />
+      </main>
+    );
+  }
   return notFound();
 }

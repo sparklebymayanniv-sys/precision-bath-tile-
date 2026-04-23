@@ -1,25 +1,27 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = "https://precisionbathtile.com";
+
   return [
     {
-      url: "https://precisionbathtile.com",
+      url: `${base}/`,
       lastModified: new Date(),
     },
     {
-      url: "https://precisionbathtile.com/services",
+      url: `${base}/services`,
       lastModified: new Date(),
     },
     {
-      url: "https://precisionbathtile.com/builders",
+      url: `${base}/builders`,
       lastModified: new Date(),
     },
     {
-      url: "https://precisionbathtile.com/request",
+      url: `${base}/request`,
       lastModified: new Date(),
     },
     {
-      url: "https://precisionbathtile.com/journal",
+      url: `${base}/journal`,
       lastModified: new Date(),
     },
   ];

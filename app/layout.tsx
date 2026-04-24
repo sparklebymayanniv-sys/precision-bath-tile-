@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   },
   description:
     "Residential tile installation for high-end bathrooms, showers, feature walls, and finish-driven spaces across Greater Boston.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },

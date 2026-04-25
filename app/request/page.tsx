@@ -266,7 +266,7 @@ export default function RequestPage() {
                   </span>
                   <span className="mt-2 block text-sm leading-6 text-neutral-300">
                     Add project photos, inspiration images, drawings, or tile
-                    references. Photos are easier than links.
+                    references. Accepted formats: JPG, PNG, PDF. Max file size: 10MB.
                   </span>
                   <input
                     name="attachments"
@@ -347,7 +347,7 @@ export default function RequestPage() {
                 Best fit
               </p>
               <h3 className="mt-4 text-2xl font-semibold">
-                High-quality projects
+                 High-quality projects
               </h3>
               <ul className="mt-6 space-y-3 text-neutral-300">
                 <li>Custom homes</li>

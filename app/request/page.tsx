@@ -35,6 +35,7 @@ const roughInOptions = [
 
 export default function RequestPage() {
   const FORM_ACTION = "https://formspree.io/f/mlgobnqw";
+  const PHONE = "+18574286123";
 
   return (
     <main className="min-h-screen bg-[#161a1f] text-white">
@@ -49,9 +50,9 @@ export default function RequestPage() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300">
-            Residential tile work requires clarity, coordination, and
-            precision. The more accurate your information, the faster we can
-            evaluate your project.
+            Residential tile work requires clarity, coordination, and precision.
+            The more accurate your information, the faster we can evaluate your
+            project.
           </p>
         </div>
       </section>
@@ -73,6 +74,7 @@ export default function RequestPage() {
             </p>
 
             <form
+              encType="multipart/form-data"
               onSubmit={async (e) => {
                 e.preventDefault();
 
@@ -88,6 +90,7 @@ export default function RequestPage() {
                 });
 
                 if (res.ok) {
+                  form.reset();
                   window.location.href = "/thank-you";
                 } else {
                   alert("Something went wrong. Please try again.");
@@ -100,7 +103,6 @@ export default function RequestPage() {
                 name="_subject"
                 value="New Project Request — Precision Bath & Tile"
               />
-              <input type="hidden" name="_template" value="table" />
 
               <div>
                 <p className="text-sm uppercase tracking-[0.22em] text-neutral-400">
@@ -110,6 +112,7 @@ export default function RequestPage() {
                 <div className="mt-5 grid gap-6 md:grid-cols-2">
                   <input
                     name="name"
+                    autoComplete="name"
                     required
                     placeholder="Full name"
                     className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
@@ -117,6 +120,7 @@ export default function RequestPage() {
 
                   <input
                     name="company"
+                    autoComplete="organization"
                     placeholder="Company (optional)"
                     className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
                   />
@@ -124,6 +128,7 @@ export default function RequestPage() {
                   <input
                     name="email"
                     type="email"
+                    autoComplete="email"
                     required
                     placeholder="Email"
                     className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
@@ -131,8 +136,11 @@ export default function RequestPage() {
 
                   <input
                     name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    inputMode="tel"
                     required
-                    placeholder="(781) 350-8220"
+                    placeholder="Your phone number"
                     className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
                   />
                 </div>
@@ -162,8 +170,9 @@ export default function RequestPage() {
 
                   <input
                     name="location"
+                    autoComplete="address-level2"
                     required
-                    placeholder="Project location"
+                    placeholder="Project city / location"
                     className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
                   />
 
@@ -251,12 +260,46 @@ export default function RequestPage() {
                   className="mt-4 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
                 />
 
+                <label className="mt-4 block rounded-2xl border border-dashed border-white/20 bg-black/20 p-5">
+                  <span className="block text-sm uppercase tracking-[0.18em] text-neutral-400">
+                    Upload photos
+                  </span>
+                  <span className="mt-2 block text-sm leading-6 text-neutral-300">
+                    Add project photos, inspiration images, drawings, or tile
+                    references. Photos are easier than links.
+                  </span>
+                  <input
+                    name="attachments"
+                    type="file"
+                    accept="image/*,.pdf"
+                    multiple
+                    className="mt-4 block w-full text-sm text-neutral-300 file:mr-4 file:rounded-full file:border-0 file:bg-white file:px-5 file:py-2 file:text-sm file:font-medium file:text-black"
+                  />
+                </label>
+
                 <input
                   name="inspiration"
                   type="url"
-                  placeholder="Link to plans, Dropbox, Google Drive, Houzz, etc. (optional)"
+                  placeholder="Optional link to plans, Dropbox, Google Drive, Houzz, etc."
                   className="mt-4 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
                 />
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-black/20 p-6">
+                <p className="text-sm uppercase tracking-[0.22em] text-neutral-400">
+                  Fast contact
+                </p>
+                <p className="mt-3 leading-8 text-neutral-300">
+                  Need a faster response? Text us directly and mention the city,
+                  project type, and timeline.
+                </p>
+
+                <a
+                  href={`sms:${PHONE}?body=Hi, I need a quote for a tile project. Project city: `}
+                  className="mt-4 inline-flex rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+                >
+                  Text Us Now
+                </a>
               </div>
 
               <div className="rounded-3xl border border-white/10 bg-black/20 p-6">
@@ -319,7 +362,8 @@ export default function RequestPage() {
                 Why this matters
               </p>
               <h3 className="mt-4 text-2xl font-semibold">
-                Cheap installation is the most expensive mistake in construction.
+                Cheap installation is the most expensive mistake in
+                construction.
               </h3>
               <p className="mt-4 leading-8 text-neutral-300">
                 The finish is where the eye rests and where value is judged.

@@ -1,5 +1,4 @@
 "use client";
-
 const projectTypes = [
   "Custom home",
   "Primary bathroom remodel",

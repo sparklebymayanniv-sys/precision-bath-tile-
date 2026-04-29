@@ -1,54 +1,48 @@
-import Link from "next/link";
-import Script from "next/script";
-
 export default function ThankYouPage() {
   return (
-    <>
-      {/* Google Ads Conversion Event */}
-      <Script id="google-ads-conversion" strategy="afterInteractive">
-        {`
-          gtag('event', 'conversion', {
-            'send_to': 'AW-2090430841/XXXXXXXXXXX'
-          });
-        `}
-      </Script>
+    <main className="min-h-screen bg-[#161a1f] text-white">
+      <section className="mx-auto max-w-4xl px-6 py-24 text-center">
+        <p className="text-sm uppercase tracking-[0.28em] text-neutral-400">
+          Thank you
+        </p>
 
-      <main className="min-h-screen bg-[#070B0F] text-white">
-        <div className="mx-auto flex min-h-screen max-w-4xl items-center px-6 py-24">
-          <div className="w-full rounded-[2rem] border border-white/10 bg-white/[0.03] p-10 md:p-14">
-            <p className="text-[10px] uppercase tracking-[0.34em] text-[#A8A39A]">
-              Request Received
-            </p>
+        <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-5xl">
+          Your request has been received.
+        </h1>
 
-            <h1 className="mt-5 max-w-[12ch] text-[2.8rem] leading-[0.95] tracking-[-0.05em] text-[#ECE7DE] md:text-[4rem]">
-              Thanks. We’ll review your project and follow up.
-            </h1>
+        <p className="mt-6 text-lg leading-8 text-neutral-300">
+          We’ll review the details and reach out shortly to discuss your tile
+          project.
+        </p>
 
-            <p className="mt-6 max-w-[55ch] text-[16px] leading-[1.9] text-[#CFC7BD]">
-              We review each request based on scope, timeline, and project fit. 
-              Qualified projects receive a response within 24–48 hours.
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="/"
+            className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+          >
+            Back to home
+          </a>
 
-              If your timeline is tight or the project is already underway, include that clearly in your request so we can prioritize accordingly.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/blog"
-                className="rounded-full bg-[#ECE7DE] px-6 py-3 text-sm font-medium text-[#070B0F] transition hover:bg-white"
-              >
-                Read the Journal
-              </Link>
-
-              <Link
-                href="/services"
-                className="rounded-full border border-white/20 px-6 py-3 text-sm text-[#ECE7DE] transition hover:bg-white/5"
-              >
-                Review Services
-              </Link>
-            </div>
-          </div>
+          <a
+            href="/services"
+            className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+          >
+            View services
+          </a>
         </div>
-      </main>
-    </>
+      </section>
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            if (window.gtag) {
+              window.gtag('event', 'conversion', {
+                'send_to': 'AW-7592282622/z13sCP6TpKQcEOXzmJZD'
+              });
+            }
+          `,
+        }}
+      />
+    </main>
   );
 }

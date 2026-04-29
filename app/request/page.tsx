@@ -1,4 +1,3 @@
-"use client";
 const projectTypes = [
   "Custom home",
   "Primary bathroom remodel",
@@ -73,28 +72,9 @@ export default function RequestPage() {
             </p>
 
             <form
+              action={FORM_ACTION}
+              method="POST"
               encType="multipart/form-data"
-              onSubmit={async (e) => {
-                e.preventDefault();
-
-                const form = e.currentTarget;
-                const data = new FormData(form);
-
-                const res = await fetch(FORM_ACTION, {
-                  method: "POST",
-                  body: data,
-                  headers: {
-                    Accept: "application/json",
-                  },
-                });
-
-                if (res.ok) {
-                  form.reset();
-                  window.location.href = "/thank-you";
-                } else {
-                  alert("Something went wrong. Please try again.");
-                }
-              }}
               className="mt-10 grid gap-8"
             >
               <input
@@ -102,6 +82,7 @@ export default function RequestPage() {
                 name="_subject"
                 value="New Project Request — Precision Bath & Tile"
               />
+              <input type="hidden" name="_next" value="/thank-you" />
 
               <div>
                 <p className="text-sm uppercase tracking-[0.22em] text-neutral-400">
@@ -265,7 +246,8 @@ export default function RequestPage() {
                   </span>
                   <span className="mt-2 block text-sm leading-6 text-neutral-300">
                     Add project photos, inspiration images, drawings, or tile
-                    references. Accepted formats: JPG, PNG, PDF. Max file size: 10MB.
+                    references. Accepted formats: JPG, PNG, PDF. Max file size:
+                    10MB.
                   </span>
                   <input
                     name="attachments"
@@ -346,7 +328,7 @@ export default function RequestPage() {
                 Best fit
               </p>
               <h3 className="mt-4 text-2xl font-semibold">
-                 High-quality projects
+                High-quality projects
               </h3>
               <ul className="mt-6 space-y-3 text-neutral-300">
                 <li>Custom homes</li>

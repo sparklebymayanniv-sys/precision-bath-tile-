@@ -101,7 +101,11 @@ export default function RequestPage() {
                 name="_subject"
                 value="New Project Request — Precision Bath & Tile"
               />
-              <input type="hidden" name="_next" value="/thank-you" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://precisionbathtile.com/thank-you"
+/>
 
               <div>
                 <p className="text-sm uppercase tracking-[0.22em] text-neutral-400">

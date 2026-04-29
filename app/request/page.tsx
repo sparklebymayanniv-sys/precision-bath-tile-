@@ -1,3 +1,23 @@
+export const metadata = {
+  title: "Request a Tile Project Quote | Precision Bath & Tile",
+  description:
+    "Submit your residential tile project details for a fast quote on bathrooms, showers, kitchen backsplashes, heated floors, stone work and more.",
+  openGraph: {
+    title: "Request a Tile Project Quote | Precision Bath & Tile",
+    description:
+      "Submit your residential tile project details for a fast quote on bathrooms, showers, kitchen backsplashes, heated floors, stone work and more.",
+    url: "https://precisionbathtile.com/request",
+    siteName: "Precision Bath & Tile",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Request a Tile Project Quote | Precision Bath & Tile",
+    description:
+      "Submit your residential tile project details for a fast quote on bathrooms, showers, kitchen backsplashes, heated floors, stone work and more.",
+  },
+};
+
 const projectTypes = [
   "Custom home",
   "Primary bathroom remodel",
@@ -74,7 +94,6 @@ export default function RequestPage() {
             <form
               action={FORM_ACTION}
               method="POST"
-              encType="multipart/form-data"
               className="mt-10 grid gap-8"
             >
               <input
@@ -240,24 +259,6 @@ export default function RequestPage() {
                   className="mt-4 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none placeholder:text-neutral-500 focus:border-white/30"
                 />
 
-                <label className="mt-4 block rounded-2xl border border-dashed border-white/20 bg-black/20 p-5">
-                  <span className="block text-sm uppercase tracking-[0.18em] text-neutral-400">
-                    Upload photos
-                  </span>
-                  <span className="mt-2 block text-sm leading-6 text-neutral-300">
-                    Add project photos, inspiration images, drawings, or tile
-                    references. Accepted formats: JPG, PNG, PDF. Max file size:
-                    10MB.
-                  </span>
-                  <input
-                    name="attachments"
-                    type="file"
-                    accept="image/*,.pdf"
-                    multiple
-                    className="mt-4 block w-full text-sm text-neutral-300 file:mr-4 file:rounded-full file:border-0 file:bg-white file:px-5 file:py-2 file:text-sm file:font-medium file:text-black"
-                  />
-                </label>
-
                 <input
                   name="inspiration"
                   type="url"
@@ -369,6 +370,33 @@ export default function RequestPage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Request a Tile Project Quote | Precision Bath & Tile",
+            description:
+              "Submit your residential tile project details for a fast quote on bathrooms, showers, kitchen backsplashes, heated floors, stone work and more.",
+            url: "https://precisionbathtile.com/request",
+            mainEntity: {
+              "@type": "Service",
+              name: "Residential tile installation quote",
+              description:
+                "Quote request page for residential tile projects including bathrooms, showers, kitchens, heated floors, and stone work.",
+              provider: {
+                "@type": "LocalBusiness",
+                name: "Precision Bath & Tile",
+                telephone: "+1-857-428-6123",
+                email: "contact@precisionbathtile.com",
+                url: "https://precisionbathtile.com",
+              },
+            },
+          }),
+        }}
+      />
     </main>
   );
 }

@@ -1,10 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Precision Bath & Tile | Boston Residential Tile Contractors",
+  description:
+    "Precision tile installation for bathrooms, showers, kitchens, heated floors, and stone work across Greater Boston.",
+  openGraph: {
+    title: "Precision Bath & Tile | Boston Residential Tile Contractors",
+    description:
+      "Precision tile installation for bathrooms, showers, kitchens, heated floors, and stone work across Greater Boston.",
+    url: "https://precisionbathtile.com",
+    siteName: "Precision Bath & Tile",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Precision Bath & Tile | Boston Residential Tile Contractors",
+    description:
+      "Precision tile installation for bathrooms, showers, kitchens, heated floors, and stone work across Greater Boston.",
+  },
+};
+
 export default function Home() {
   return (
     <main className="overflow-x-hidden bg-[#0B0F12] text-white">
-      
       {/* HERO */}
       <section className="relative min-h-[92svh] overflow-hidden">
         <div className="absolute inset-0">
@@ -22,7 +41,6 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto flex min-h-[92svh] max-w-7xl items-center px-6 py-16 md:px-10">
           <div className="max-w-4xl">
-
             <p className="mb-6 text-xs uppercase tracking-[0.38em] text-neutral-300 md:text-sm">
               Residential Tile Work
             </p>
@@ -37,9 +55,7 @@ export default function Home() {
               clean layout and long-term performance in mind.
             </p>
 
-            {/* BUTTONS */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-              
               <Link
                 href="/request"
                 className="inline-flex items-center justify-center rounded-full bg-[#C6A56B] px-7 py-3.5 text-sm font-semibold text-black transition hover:opacity-90"
@@ -53,7 +69,6 @@ export default function Home() {
               >
                 For Builders
               </Link>
-
             </div>
           </div>
         </div>
@@ -62,7 +77,6 @@ export default function Home() {
       {/* INFO STRIP */}
       <section className="border-t border-white/10 bg-[#0F141A]">
         <div className="mx-auto grid max-w-7xl gap-5 px-6 py-6 md:grid-cols-3 md:px-10 md:py-8">
-
           <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.025] p-5 md:p-6">
             <p className="text-xs uppercase tracking-[0.24em] text-neutral-400">
               Work
@@ -89,14 +103,12 @@ export default function Home() {
               Builders, remodelers, and homeowners who value well-built spaces
             </p>
           </div>
-
         </div>
       </section>
 
       {/* GALLERY */}
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="grid gap-6 md:grid-cols-3">
-
           <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-2">
             <Image
               src="/images/home/home-1.jpg"
@@ -126,19 +138,16 @@ export default function Home() {
               className="h-[380px] w-full rounded-[1.2rem] object-cover md:h-[420px]"
             />
           </div>
-
         </div>
       </section>
 
       {/* WHY IT MATTERS */}
       <section className="border-y border-white/10 bg-[#11161c]">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:px-10">
-
           <div>
             <p className="text-xs uppercase tracking-[0.34em] text-neutral-400">
               Why it matters
             </p>
-
             <h2 className="font-[var(--font-heading)] mt-4 text-4xl font-semibold leading-tight md:text-5xl">
               Cheap installation is the most expensive mistake in construction.
             </h2>
@@ -155,14 +164,12 @@ export default function Home() {
               trust with builders and homeowners.
             </p>
           </div>
-
         </div>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 md:p-12">
-
           <p className="text-xs uppercase tracking-[0.34em] text-neutral-400">
             Next step
           </p>
@@ -177,7 +184,6 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            
             <Link
               href="/request"
               className="inline-flex items-center justify-center rounded-full bg-[#C6A56B] px-7 py-3.5 text-sm font-semibold text-black transition hover:opacity-90"
@@ -191,11 +197,31 @@ export default function Home() {
             >
               For Builders
             </Link>
-
           </div>
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Precision Bath & Tile",
+            description:
+              "Residential tile installation for bathrooms, showers, kitchens, heated floors, and stone work across Greater Boston.",
+            url: "https://precisionbathtile.com",
+            telephone: "+1-857-428-6123",
+            email: "contact@precisionbathtile.com",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Boston",
+              addressRegion: "MA",
+              addressCountry: "US",
+            },
+          }),
+        }}
+      />
     </main>
   );
 }
